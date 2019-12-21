@@ -25,4 +25,3 @@ while True:
     if k > a * b:
         k = a * b
 
-

@@ -1,6 +1,6 @@
 import math
 
-record = {}
+# record = {}
 
 n = 1
 
@@ -9,6 +9,7 @@ print('1 1')
 while True:
     # n = int(input('n?'))
     n += 1
+    record = {}
 
     # p = int(input('stamp max?'))
     p = int(n * (n + 2) / 2)
@@ -65,4 +66,7 @@ while True:
     # print(record[n]['k_list'])
     k = record[n]['k_list'][-1]
     print(k, record[n]['k_dict'][k])
+    f = open('record.txt', 'a')
+    f.write(str(record)+'\n')
+    f.close()
     # print(record)

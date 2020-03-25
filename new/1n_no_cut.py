@@ -27,7 +27,7 @@ while True:
     k_dict = {}
 
     for i in range(int(math.pow(p, n))):
-
+        record.append(0)
         num_pos = 0
         for j in stamps:  # 下一種面值分配
             stamps[num_pos] += 1

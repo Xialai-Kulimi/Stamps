@@ -1,8 +1,8 @@
 import math
 import time
 
-record_file_name = f'record.txt'
-output_file_name = f'output.txt'
+record_file_name = f'record_{str(time.time())}.txt'
+output_file_name = f'output_{str(time.time())}.txt'
 
 # record = {}
 
@@ -22,7 +22,7 @@ while True:
 
     stamps = [0] * n
 
-    record = {}
+    record = []
     k_list = []
     k_dict = {}
 
@@ -43,23 +43,23 @@ while True:
         else:
             continue  # no 1 in stamps
 
-        record[i] = {'summary': []}
+        record[i] = []
 
         for j in range(n):
             for r in range(j, n):
                 summary = 0
                 for q in range(j, r + 1):
                     summary += stamps[q]
-                record[i]['summary'].append(summary)
+                record[i].append(summary)
 
-        record[i]['summary'].append(p + 1)
-        record[i]['summary'].sort()
+        record[i].append(p + 1)
+        record[i].sort()
 
-        for j in range(len(record[i]['summary'])):
-            x = record[i]['summary'][j]
+        for j in range(len(record[i])):
+            x = record[i][j]
             # print(record[n][i]['summary'])
-            if x + 1 < record[i]['summary'][j + 1]:
-                record[i]['k'] = x
+            if x + 1 < record[i][j + 1]:
+                # record[i] = x
                 k_list.append(x)
                 k_dict[x] = i
                 break

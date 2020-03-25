@@ -3,7 +3,7 @@ import math
 while True:
     n = int(input('n?'))
     pos_num = int(input('pos_num?'))
-    p = int(n * (n + 2) / 2)
+    p = int(n * (n + 1) / 2)
 
     stamps = [0] * n
 

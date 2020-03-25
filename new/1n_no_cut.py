@@ -6,7 +6,7 @@ output_file_name = f'output.txt'
 
 # record = {}
 
-n = 1
+n = 6
 
 print('1 1')
 

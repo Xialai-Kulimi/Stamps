@@ -15,7 +15,7 @@ while True:
     record = {}
 
     # p = int(input('stamp max?'))
-    p = int(n * (n + 2) / 2)
+    p = int(n * (n + 1) / 2)
 
     stamps = [0] * n
 

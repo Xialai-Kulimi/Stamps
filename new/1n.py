@@ -1,6 +1,7 @@
 import math
 import time
-
+record_file_name = f'record{str(time.time())}.txt'
+output_file_name = f'output{str(time.time())}.txt'
 
 # record = {}
 
@@ -67,8 +68,13 @@ while True:
     record[n]['k_list'].sort()
     # print(record[n]['k_list'])
     k = record[n]['k_list'][-1]
-    print(k, record[n]['k_dict'][k])
-    f = open('record.txt', 'a')
+
+    f = open(output_file_name, 'a')
+    f.write(f'n: {n}, k: {k}, method_num: {record[n]["k_dict"][k]}')
+    # print(k, record[n]['k_dict'][k])
+    f.close()
+    
+    f = open(record_file_name, 'a')
     f.write(str(record)+'\n')
     f.close()
     # print(record)

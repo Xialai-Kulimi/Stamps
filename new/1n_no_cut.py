@@ -73,7 +73,7 @@ while True:
     k = k_list[-1]
 
     f = open(output_file_name, 'a')
-    f.write(f'n: {n}, k: {k}, method_num: {k_dict[k]}')
+    f.write(f'n: {n}, k: {k}, method_num: {k_dict[k]}\n')
     print(k, k_dict[k])
     f.close()
 

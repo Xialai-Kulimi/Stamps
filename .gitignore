@@ -3,3 +3,4 @@
 *.xml
 .DS_Store
 .idea/stamps.iml
+venv/Lib/site-packages/setuptools-40.8.0-py3.7.egg

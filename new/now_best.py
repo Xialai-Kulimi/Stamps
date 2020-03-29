@@ -6,7 +6,7 @@ import time
 
 # record = {}
 
-n = 4
+n = 7
 
 # print('1 1')
 
@@ -79,7 +79,8 @@ while True:
     n += 1
     # f = open(output_file_name, 'a')
     # f.write(f'n: {n}, k: {k}, method_num: {k_dict[k]}\n')
-    # print(k, k_dict[k])
+    print(n)
+    print(k, k_dict[k])
     # f.close()
 
     # f = open(record_file_name, 'a')

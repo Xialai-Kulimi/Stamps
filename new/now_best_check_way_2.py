@@ -1,7 +1,7 @@
 import math
 import time
 
-n = 4
+n = 7
 
 while True:
 

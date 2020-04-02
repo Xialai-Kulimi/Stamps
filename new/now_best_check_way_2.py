@@ -1,7 +1,7 @@
 import math
 import time
 
-n = 7
+n = 4
 
 while True:
 
@@ -11,6 +11,8 @@ while True:
 
     k = n
     k_list = []
+
+    check_times = int((len(stamps) - (len(stamps) % 2))/2)
 
     for i in range(int(math.pow(p, n))):
 
@@ -29,34 +31,38 @@ while True:
         else:
             continue  # no 1 in stamps
 
-        if stamps[0] > stamps[-1]:  # Check this before.
-            continue
-
-        record = []
-
-        for j in range(n):  # Methods of coloring.
-            for r in range(j, n):
-                summary = 0
-                for q in range(j, r + 1):
-                    summary += stamps[q]
-                record.append(summary)
-
-        record.append(p + 1)  # Make a BIG gap.
-        record.sort()
-
-        for j in range(len(record)):
-            x = record[j]
-            if x + 1 < record[j + 1]:
-                if x > k:
-                    k_list = [i]
-                    k = x
-                elif x == k:
-                    k_list.append(i)
-                break
+        for j in range(check_times):
+            pass
+            # if stamps[j] > stamps[n-j-1]:
+            #     break
         else:
-            print('error occur')
-            print(record)
-            input()
+            record = []
+
+            for j in range(n):  # Methods of coloring.
+                for r in range(j, n):
+                    summary = 0
+                    for q in range(j, r + 1):
+                        summary += stamps[q]
+                    record.append(summary)
+
+            record.append(p + 1)  # Make a BIG gap.
+            record.sort()
+
+            for j in range(len(record)):
+                x = record[j]
+                if x + 1 < record[j + 1]:
+                    if x > k:
+                        k_list = [[stamps, i]]
+                        k = x
+                    elif x == k:
+                        k_list.append([stamps, i])
+                    break
+            else:
+                print('error occur')
+                print(record)
+                input()
+
+
 
     print(n)
     print(k, k_list)

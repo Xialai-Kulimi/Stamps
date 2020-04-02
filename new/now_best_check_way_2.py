@@ -32,9 +32,8 @@ while True:
             continue  # no 1 in stamps
 
         for j in range(check_times):
-            pass
-            # if stamps[j] > stamps[n-j-1]:
-            #     break
+            if stamps[j] > stamps[n-j-1]:
+                break
         else:
             record = []
 
@@ -61,8 +60,6 @@ while True:
                 print('error occur')
                 print(record)
                 input()
-
-
 
     print(n)
     print(k, k_list)

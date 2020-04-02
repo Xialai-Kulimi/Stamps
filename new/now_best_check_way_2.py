@@ -1,7 +1,7 @@
 import math
 import time
 
-n = 4
+n = 8
 
 while True:
 
@@ -51,10 +51,10 @@ while True:
                 x = record[j]
                 if x + 1 < record[j + 1]:
                     if x > k:
-                        k_list = [[stamps, i]]
+                        k_list = [i]
                         k = x
                     elif x == k:
-                        k_list.append([stamps, i])
+                        k_list.append(i)
                     break
             else:
                 print('error occur')

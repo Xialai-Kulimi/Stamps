@@ -71,4 +71,5 @@ while True:
     # print(k_dict)
     f = open('result.md', 'a')
     f.write(f'n: {n}\nk: {k} method: {k_list}\n')
+    f.close()
     n += 1

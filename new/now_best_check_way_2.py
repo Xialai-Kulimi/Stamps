@@ -1,9 +1,5 @@
 import math
 import time
-import multiprocessing
-
-cores = multiprocessing.cpu_count()
-pool = multiprocessing.Pool(processes=cores)
 
 n = 8
 
@@ -76,22 +72,3 @@ while True:
     f.close()
     n += 1
     print(time.time() - start_time)
-
-
-'''
-while:
-    for: # 下一個面值分配方法
-        ### 
-        for: # 將面值變換
-        
-        for: # 第一個剪枝
-            
-        for: # 第二個剪枝
-
-        else: # 計算k值
-            for: # 算出所有k值
-            
-            for: #　找出最大的k值 
-        
-    # 輸出結果
-'''

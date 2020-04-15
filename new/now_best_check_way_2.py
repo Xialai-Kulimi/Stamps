@@ -11,7 +11,7 @@ while True:
 
     k = n
     k_list = []
-    k_dict = {}
+    # k_dict = {}
 
     check_times = int((len(stamps) - (len(stamps) % 2)) / 2)
 

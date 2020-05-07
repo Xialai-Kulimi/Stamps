@@ -4,5 +4,5 @@
 .DS_Store
 .idea/stamps.iml
 venv/Lib/site-packages/setuptools-40.8.0-py3.7.egg
-new/record.txt
-new/test_file
+old/new/record.txt
+old/new/test_file

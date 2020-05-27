@@ -7,7 +7,7 @@ while True:
     start_time = time.time()
     p = n * (n + 1) // 2
 
-    stamps = [1] * n
+    stamps = [1] * (n+1)
 
     k = n
     k_list = []
@@ -15,7 +15,7 @@ while True:
 
     check_times = (len(stamps) - (len(stamps) % 2)) // 2
 
-    for i in range(int(math.pow(p, n))):
+    for i in range(int(math.pow(p, n-1))):
 
         num_pos = 0
         for j in stamps:  # 下一種面值分配
@@ -76,3 +76,4 @@ while True:
     f.close()
     n += 1
     print(time.time() - start_time)
+    input()
